@@ -1,0 +1,200 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(9, 9, 9, 0.4);
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background-color: rgba(9, 9, 9, 0.4);
+    background-color: #2f2f2f;
+    padding: 40px 120px;
+    max-width: 1122px;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .iconTrial{
+    position: absolute;
+    top: 28px;
+    right: 220px;
+  }
+
+
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #585858;
+    border-radius: 50%; /* Làm tròn các góc */
+    width: 48px; /* Đảm bảo chiều rộng và chiều cao bằng nhau */
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #585858;
+    font-size: 48px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .modal-title {
+    font-size: 52px;
+    font-weight: bold;
+  }
+
+ 
+  .modal-price {
+    font-size: 58px;
+    font-weight: bold;
+  }
+  
+  .modal-original-price {
+    text-decoration: none;
+    color: #BCBCBC;
+    font-size: 36px;
+    margin-right: 10px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: red; /* Màu của dấu gạch ngang */
+        transform: translateY(-50%);
+      }
+  }
+  
+  .modal-features {
+    list-style: none;
+    padding: 0;
+    padding: 20px 156px;
+    text-align: left;
+    background: #1C1C1D;
+  
+    li {
+      margin-bottom: 8px;
+      font-size: 32px;
+      font-weight: 100;
+    }
+  
+    .modal-check{
+        display: flex;
+        gap: 11px;
+    }
+  }
+  
+  .modal-button {
+    background: linear-gradient(180deg, #25efee 0%, #1b6d6d 95%);
+    color: #fff;
+    padding: 16px 80px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 4px;
+  }
+  
+  .modal-note {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  @media (max-width: 1536px) {
+    .modal {
+      padding: 30px 90px;
+      max-width: 900px;
+    }
+  
+    .modal-close {
+      width: 40px;
+      height: 40px;
+      font-size: 40px;
+    }
+  
+    .modal-title {
+      font-size: 42px;
+    }
+  
+    .modal-price {
+      font-size: 48px;
+    }
+  
+    .modal-original-price {
+      font-size: 28px;
+    }
+  
+    .modal-features {
+      padding: 20px 120px;
+  
+      li {
+        font-size: 26px;
+      }
+    }
+  
+    .modal-button {
+      padding: 14px 60px;
+      font-size: 30px;
+    }
+  
+    .modal-note {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .modal {
+      padding: 20px 60px;
+      max-width: 700px;
+    }
+  
+    .modal-close {
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+    }
+  
+    .modal-title {
+      font-size: 36px;
+    }
+  
+    .modal-price {
+      font-size: 40px;
+    }
+  
+    .modal-original-price {
+      font-size: 24px;
+    }
+  
+    .modal-features {
+      padding: 20px 80px;
+  
+      li {
+        font-size: 22px;
+      }
+    }
+  
+    .modal-button {
+      padding: 12px 50px;
+      font-size: 24px;
+    }
+  
+    .modal-note {
+      font-size: 24px;
+    }
+  }

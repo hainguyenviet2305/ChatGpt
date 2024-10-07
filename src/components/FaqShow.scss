@@ -1,0 +1,162 @@
+.faq-slideshow-container {
+  padding: 0 160px;
+  position: relative;
+  color: #ffffff;
+
+  .faq-slideshow {
+    .faq-container {
+
+
+      .faq-item {
+        width: 473px;
+      }
+      .faq-header {
+        height: 108px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        line-height: 1;
+        padding: 12px 28px;
+        font-size: 32px;
+        font-weight: bold;
+        background: #585858;
+        justify-content: center; /* Centers the content inside the header */
+      }
+
+      .faq-content {
+        font-size: 20px;
+        padding: 0px 32px;
+        text-align: center;
+        background: #2f2f2f;
+        height: 270px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  
+  /* Slick arrow customizations */
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    
+    &:before {
+      font-size: 120px;
+      //   color: #03c0b7; /* Arrow color */
+    }
+  }
+
+  .slick-prev:before,
+.slick-next:before {
+  display: none; // Ẩn mũi tên mặc định
+}
+
+  /* Positioning for previous and next arrows */
+  .slick-prev {
+    left: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slick-next {
+    right: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Adjusts spacing between slides */
+  .slick-slide > div {
+    margin: 0 20px; /* 40px total spacing between cards (20px on each side) */
+  }
+}
+
+@media (max-width: 1536px) {
+  .faq-slideshow-container {
+    padding: 0 100px; /* Reduce padding */
+
+    .faq-slideshow {
+      .faq-container {
+        .faq-item {
+          width: 400px; /* Reduce item width */
+        }
+        .faq-header {
+          height: 90px; /* Adjust header height */
+          font-size: 28px; /* Reduce font size */
+        }
+
+        .faq-content {
+          font-size: 18px; /* Adjust content font size */
+          height: 240px; /* Adjust content height */
+        }
+      }
+    }
+
+    .slick-prev, .slick-next {
+      z-index: 1; 
+      width: 100px; /* Thay đổi kích thước theo ý muốn */
+      height: 100px; /* Thay đổi kích thước theo ý muốn */
+      cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
+    }
+    
+    /* Ví dụ: Điều chỉnh vị trí mũi tên */
+    .slick-prev {
+      left: -80px; /* Điều chỉnh vị trí trái */
+    }
+    
+    .slick-next {
+      right: -80px; /* Điều chỉnh vị trí phải */
+    }
+
+    .slick-slide > div {
+      margin: 0 16px; /* Reduce spacing between slides */
+    }
+  }
+}
+
+@media (max-width: 1367px) {
+  .faq-slideshow-container {
+    padding: 0 50px; /* Giảm padding khi màn hình nhỏ hơn 1367px */
+
+    .faq-slideshow {
+      .faq-container {
+        .faq-item {
+          width: 360px; /* Giảm chiều rộng thẻ */
+        }
+        .faq-header {
+          height: 80px; /* Điều chỉnh chiều cao header */
+          font-size: 24px; /* Giảm kích thước font */
+        }
+
+        .faq-content {
+          font-size: 16px; /* Điều chỉnh kích thước font của nội dung */
+          height: 200px; /* Điều chỉnh chiều cao nội dung */
+        }
+      }
+    }
+
+    .slick-prev, .slick-next {
+      z-index: 1; 
+      width: 80px; /* Thay đổi kích thước theo ý muốn */
+      height: 80px; /* Thay đổi kích thước theo ý muốn */
+      cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
+    }
+    
+    /* Ví dụ: Điều chỉnh vị trí mũi tên */
+    .slick-prev {
+      left: -60px; /* Điều chỉnh vị trí trái */
+    }
+    
+    .slick-next {
+      right: -60px; /* Điều chỉnh vị trí phải */
+    }
+
+    .slick-slide > div {
+      margin: 0 12px; /* Giảm khoảng cách giữa các slide */
+    }
+  }
+}

@@ -1,0 +1,104 @@
+// src/components/MovingLines.scss
+.moving-lines-container {
+  overflow: hidden;
+  width: 100%;
+  background-color: #0e0e0e;
+  padding: 80px 0;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 40px;
+}
+
+.moving-lines {
+  display: flex;
+  flex-wrap: nowrap;
+
+  gap: 20px;
+  width: 100%; 
+  width: max-content;
+  animation-play-state: running;
+  overflow: hidden;
+}
+
+.moving-lines:hover {
+  animation-play-state: paused;
+}
+
+.row-1 {
+  animation: moveLeft 30s linear infinite;
+}
+
+.row-2 {
+  animation: moveRight 30s linear infinite;
+}
+
+.row-3 {
+  animation: moveLeft 30s linear infinite;
+}
+
+
+
+.line {
+  display: inline-block;
+  font-size: 20px;
+  color: #ffffff;
+  // background: linear-gradient(90deg, #1e3c72, #2a5298);
+  padding: 24px 32px;
+  border-radius: 10px;
+  white-space: normal; /* Cho phép xuống dòng */
+  word-wrap: break-word; /* Cho phép xuống dòng khi hết chỗ */
+  width: 381px; /* Điều chỉnh chiều dài tối đa của ô chứa */
+  text-align: center;
+}
+
+.element {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);                          
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%);  /* Bắt đầu từ ngoài khung nhìn bên trái */
+  }
+  100% {
+    transform: translateX(0%);  /* Kết thúc tại điểm xuất hiện trong khung nhìn */
+  }
+}
+
+@media (max-width: 1366px) {
+  .moving-lines-container {
+    padding: 60px 0; /* Giảm padding khi màn hình nhỏ hơn 1366px */
+    gap: 30px; /* Giảm khoảng cách giữa các hàng */
+    width: 100%;
+  }
+
+  .line {
+    font-size: 18px; /* Giảm kích thước font */
+    padding: 20px 28px; /* Giảm padding */
+    width: 300px; /* Giảm chiều dài tối đa của ô chứa */
+  }
+
+  .row-1 {
+    animation: moveLeft 25s linear infinite; /* Điều chỉnh thời gian animation */
+  }
+
+  .row-2 {
+    animation: moveRight 25s linear infinite; /* Điều chỉnh thời gian animation */
+  }
+
+  .row-3 {
+    animation: moveLeft 25s linear infinite; /* Điều chỉnh thời gian animation */
+  }
+}

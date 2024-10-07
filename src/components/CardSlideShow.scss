@@ -1,0 +1,169 @@
+.card-slideshow-container {
+  padding: 0 160px;
+  // margin: 0 160px;
+  position: relative;
+ 
+  .card-slideshow {
+    .card-wrapper {
+
+      .card-container {
+        padding: 40px 40px 0px 40px;
+        background: #027570;
+        height: 380px;
+        width: 480px;
+        border-radius: 12px;
+
+        .card-name {
+          font-size: 32px;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+
+        .card-star {
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+
+        .card-comment {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .slick-prev, .slick-next {
+    z-index: 1; 
+    width: 120px; 
+    height: 120px; 
+    &:before {
+      font-size: 120px; 
+      color: #03C0B7; /* Màu sắc của mũi tên */
+    }
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: none; // Ẩn mũi tên mặc định
+  }
+
+  .slick-prev {
+    left: -120px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+  }
+
+  .slick-next {
+    right: -120px; 
+    top: 50%; 
+    transform: translateY(-50%);
+  }
+
+  .slick-slide > div {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 1536px) {
+  .card-slideshow-container {
+    padding: 0 100px; /* Giảm padding khi màn hình nhỏ hơn 1536px */
+    
+    .card-slideshow {
+      .card-wrapper {
+        .card-container {
+          height: 340px; /* Giảm chiều cao thẻ */
+          width: 420px; /* Giảm chiều rộng thẻ */
+          padding: 30px 30px 0px 30px; /* Giảm padding cho thẻ */
+
+          .card-name {
+            font-size: 28px; /* Giảm kích thước font của tên */
+            margin-bottom: 16px; /* Điều chỉnh margin-bottom */
+          }
+
+          .card-star {
+            font-size: 28px; /* Giảm kích thước font của đánh giá */
+            margin-bottom: 16px;
+          }
+
+          .card-comment {
+            font-size: 18px; /* Giảm kích thước font của comment */
+          }
+        }
+      }
+    }
+
+    /* Điều chỉnh kích thước và vị trí của mũi tên */
+    .slick-prev, .slick-next {
+      width: 100px;
+      height: 100px;
+      
+      &:before {
+        font-size: 100px; /* Giảm kích thước mũi tên */
+      }
+    }
+
+    .slick-prev {
+      left: -100px; /* Điều chỉnh vị trí mũi tên */
+    }
+
+    .slick-next {
+      right: -100px; /* Điều chỉnh vị trí mũi tên */
+    }
+
+    /* Giảm khoảng cách giữa các slide */
+    .slick-slide > div {
+      margin: 0 16px;
+    }
+  }
+}
+
+@media (max-width: 1471px) {
+  .card-slideshow-container {
+    padding: 0 60px; /* Giảm padding khi màn hình nhỏ hơn 1471px */
+    
+    .card-slideshow {
+      .card-wrapper {
+        .card-container {
+          height: 320px; /* Giảm chiều cao thẻ */
+          width: 400px; /* Giảm chiều rộng thẻ */
+          padding: 20px 20px 0px 20px; /* Giảm padding cho thẻ */
+
+          .card-name {
+            font-size: 26px; /* Giảm kích thước font của tên */
+            margin-bottom: 14px; /* Điều chỉnh margin-bottom */
+          }
+
+          .card-star {
+            font-size: 26px; /* Giảm kích thước font của đánh giá */
+            margin-bottom: 14px;
+          }
+
+          .card-comment {
+            font-size: 18px; /* Giảm kích thước font của comment */
+          }
+        }
+      }
+    }
+
+    /* Điều chỉnh kích thước và vị trí của mũi tên */
+    .slick-prev, .slick-next {
+      width: 90px;
+      height: 90px;
+      
+      &:before {
+        font-size: 90px; /* Giảm kích thước mũi tên */
+      }
+    }
+
+    .slick-prev {
+      left: -60px; /* Điều chỉnh vị trí mũi tên */
+    }
+
+    .slick-next {
+      right: -60px; /* Điều chỉnh vị trí mũi tên */
+    }
+
+    /* Giảm khoảng cách giữa các slide */
+    .slick-slide > div {
+      margin: 0 14px;
+    }
+  }
+}

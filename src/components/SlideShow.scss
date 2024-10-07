@@ -1,0 +1,75 @@
+.slideshow-ctn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the slideshow */
+  width: 100%;
+  gap: 40px;
+}
+
+.slideshow {
+  flex: 1;
+  max-width: 500px; /* Adjust max-width as needed */
+  overflow: hidden; /* Ensure the slider doesn't overflow */
+}
+
+.arrow-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slideshow-ctn:hover .arrow-button {
+  opacity: 1; 
+}
+
+.left-arrow {
+  left: -50px; /* Adjust position to be 40px away from the slideshow */
+}
+
+.right-arrow {
+  right: -50px; /* Adjust position to be 40px away from the slideshow */
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Add border radius for better appearance */
+}
+
+@media (max-width: 1536px) {
+  .slideshow-ctn {
+    gap: 30px; /* Giảm khoảng cách giữa các phần tử */
+  }
+
+  .slideshow {
+    max-width: 450px; /* Điều chỉnh kích thước tối đa của slideshow */
+  }
+
+  .arrow-button {
+    width: 100px; /* Giảm kích thước mũi tên */
+    height: 100px;
+  }
+
+  .left-arrow {
+    left: -40px; /* Điều chỉnh khoảng cách từ cạnh trái */
+  }
+
+  .right-arrow {
+    right: -40px; /* Điều chỉnh khoảng cách từ cạnh phải */
+  }
+
+  .arrow-button::before {
+    font-size: 100px; /* Giảm kích thước biểu tượng mũi tên */
+  }
+}

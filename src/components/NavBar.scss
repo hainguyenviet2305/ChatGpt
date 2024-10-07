@@ -1,0 +1,97 @@
+.container {
+  .navbar {
+    position: relative;
+    width: 100%;  
+    background-color: #0e0e0e; /* Màu nền chính */
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+
+    
+
+    /* Thêm lớp phủ */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.05); /* Lớp phủ với opacity 5% */
+      z-index: 1; /* Đảm bảo lớp phủ nằm trên nền */
+    }
+
+    .navbar-logo {
+      cursor: pointer;
+      position: relative; /* Đảm bảo nằm trên lớp phủ */
+      z-index: 2;
+    }
+
+    &-menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0 40px;
+      position: relative;
+      z-index: 2;
+
+      li {
+        a {
+          color: #fff;
+          text-decoration: none;
+          padding-bottom: 5px;
+          position: relative;
+          font-weight: bold;
+          font-size: 28px;
+
+          &.active::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #03c0b7;
+            bottom: 0;
+            left: 0;
+          }
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1536px) {
+  .navbar {
+    padding: 12px 30px;
+
+    .navbar-menu {
+      gap: 0 30px;
+
+      li {
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 1200px) {
+//   .navbar {
+//     padding: 12px 20px;
+
+//     .navbar-menu {
+//       gap: 0 20px;
+
+//       li {
+//         a {
+//           font-size: 20px;
+//         }
+//       }
+//     }
+//   }
+// }
